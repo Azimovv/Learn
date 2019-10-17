@@ -33,7 +33,7 @@ scipy==1.1.0
 six==1.11.0
 soupsieve==1.9.4
 update-checker==0.16
-urllib3==1.23
+urllib3==1.24.2
 virtualenv==16.7.6
 websocket-client==0.56.0
 Werkzeug==0.16.0
