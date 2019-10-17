@@ -17,8 +17,8 @@ topics_dict = {"title": [],
                "comms": [],
                "created": [],
                "body": []}
-subreddit = reddit.subreddit('fireteams')
-top_science = subreddit.new()
+subreddit = reddit.subreddit('science')
+top_science = subreddit.top()
 
 for submission in top_science:
     topics_dict["title"].append(submission.title)
