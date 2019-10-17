@@ -1,0 +1,7 @@
+.open self_taught
+CREATE TABLE self_taught(
+name string
+project string
+age int
+birthday date
+);
