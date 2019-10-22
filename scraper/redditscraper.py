@@ -2,10 +2,10 @@ import praw
 import pandas as pd
 import datetime as dt
 
-reddit = praw.Reddit(client_id='fRj6TrbJrwEY_A',
-                     client_secret='Fy4qZPuyV6YL7_dK-5FVynFe72M',
-                     user_agent='learningHowToScrape',
-                     redirect_uri='http://localhost:8080',)
+reddit = praw.Reddit(client_id='[REDACTED]',
+                     client_secret='[REDACTED]',
+                     user_agent='[REDACTED]',
+                     redirect_uri='[REDACTED]',)
 
 def get_date(created):
     return dt.datetime.fromtimestamp(created)
@@ -17,8 +17,8 @@ topics_dict = {"title": [],
                "comms": [],
                "created": [],
                "body": []}
-subreddit = reddit.subreddit('fireteams')
-top_science = subreddit.new()
+subreddit = reddit.subreddit('science')
+top_science = subreddit.top()
 
 for submission in top_science:
     topics_dict["title"].append(submission.title)
