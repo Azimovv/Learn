@@ -1,4 +1,7 @@
+from random import randint
+
 class Animals:
+    """Class to hold different types of animals"""
     def __init__(self, name, coldBlooded, eggs, trait):
         self.is_coldBlooded = coldBlooded
         self.eggs = eggs
@@ -20,3 +23,28 @@ frog = Animals("Frog", "is cold blooded", "lays eggs", "live in water and on lan
 print('\n')
 
 eagle = Animals("Eagle", "is warm blooded", "lays eggs", "fly")
+
+class Die():
+    """Create a Die of a number of sides decided by the user
+    and roll it with the method roll_die"""
+    def __init__(self, sides):
+        self.sides = sides
+    def roll_die(self):
+        print(randint(1,self.sides))
+
+six_sided = Die(6)
+ten_sided = Die(10)
+twenty_sided = Die(20)
+
+for num in range(10):
+    six_sided.roll_die()
+
+print("")
+
+for num in range(10):
+    ten_sided.roll_die()
+
+print("")
+
+for num in range(10):
+    twenty_sided.roll_die()
